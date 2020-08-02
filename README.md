@@ -12,9 +12,13 @@ A simple python script which takes in the contest link as a command-line argumen
 
 * Python3
     * BeautifulSoup  package
-        >pip3 install beautifulsoup4
+        ```sh
+        pip3 install beautifulsoup4
+        ```
     * Requests package
-        >pip3 install requests
+        ```sh
+        pip3 install requests
+        ```
 
 ## How to run
 
