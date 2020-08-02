@@ -5,7 +5,12 @@ import requests
 from bs4 import BeautifulSoup
 import shutil
 
+
 def generateCFBoilerplate(problemLink, contestPath):
+    if os.path.isfile("template.cpp") == False:
+        print("Cannot find template.cpp\nPlease check whether template.cpp exists in the" +
+              "current directory or not\nExiting...")
+        sys.exit(-1)
     problemCodeRegex = re.compile(r'.+/(\w+)')
     problemCode = problemCodeRegex.findall(problemLink)[0]
     print("Please wait fetching problem "+problemCode+"...")
@@ -25,7 +30,7 @@ def generateCFBoilerplate(problemLink, contestPath):
         generatedTestcase = testcaseInput.strip()+"\n\nExpected Output:\n" + \
             testcaseOutput.strip() + "\nEnd of testcase #"+str(i+1)+"\n"
         inputFile.write(generatedTestcase)
-    shutil.copy('template.cpp',os.path.join(contestPath,problemCode+".cpp"))
+    shutil.copy('template.cpp', os.path.join(contestPath, problemCode+".cpp"))
 
 
 contestLink = str(sys.argv[1])

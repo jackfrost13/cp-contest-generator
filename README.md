@@ -1,8 +1,8 @@
-#Competitive Coding Contest Template Code Generator
+# Competitive Coding Contest Template Code Generator
 
 A simple python script which takes in the contest link as a command line argument and it automatically generates the template codes and the input files for the contest.
 
-##Key points to remember
+## Key points to remember
 
 * Works only for C++ files.
 * template.cpp must be present in the same directory
