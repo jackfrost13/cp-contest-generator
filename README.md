@@ -1,12 +1,12 @@
 # Competitive Coding Contest Template Code Generator
 
-A simple python script which takes in the contest link as a command line argument and it automatically generates the template codes and the input files for the contest.
+A simple python script which takes in the contest link as a command-line argument and generates the template codes along with the input files for the contest.
 
 ## Key points to remember
 
 * Works only for C++ files.
-* template.cpp must be present in the same directory
-* Currently works only for Codeforces contests. Compatibility for codechef is next in line. Stay tuned
+* `template.cpp` must be present in the same directory
+* Currently works only for Codeforces contests. Compatibility for CodeChef is next in line. Stay tuned
 
 ## Software Requirements
 
@@ -18,9 +18,9 @@ A simple python script which takes in the contest link as a command line argumen
 
 ## How to run
 
-The generator can be executed by simply running the `contestGen.py` file and passing the contest link as a command line argument
+The generator can be executed by simply running the `contestGen.py` file and passing the contest link as a command-line argument
   ```sh
-python3 contestGen.py <contest_link>
+python3 contestGen.py 
 ```
 
 Example:
@@ -31,8 +31,8 @@ python3 contestGen.py https://codeforces.com/contest/1389
 #### Directory structure
 1. The generator first creates a contestPlatform directory i.e `codechef` or `codeforces` if it does not exists in the current directory. 
 
-2. Inside the platform directory it will create a directory named `{contestCode}` (if it does not exists) inside which all contest problem files will be saved.
-3. Inside the contest directory a .cpp file will be created for each of the problem along with the test case input file respectively. The cpp is named as `{problemCode}.cpp` and the corresponding input file will be named as `input_{problemCode}.txt`. This will also create a single `output.txt` file inside the contest directory.
+2. Inside the platform directory, it will create a directory named `{contestCode}` (if it does not exists) inside which all contest problem files will be saved.
+3. Inside the contest directory, a .cpp file will be created for each of the problems along with the test case input file respectively. The cpp file is named as `{problemCode}.cpp` and the corresponding input file will be named as `input_{problemCode}.txt`. This will also create a single `output.txt` file inside the contest directory.
 
 The folder tree would look something like
 ```sh
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-The input file name which will be read is to be provided as a command line argument while running the cpp file
+The input file name which will be read is to be provided as a command-line argument while running the cpp file
 
 ```sh
 g++ A.cpp -o A   //compile cpp code
