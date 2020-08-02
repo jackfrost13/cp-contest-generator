@@ -28,7 +28,7 @@ Example:
 ```sh
 python3 contestGen.py https://codeforces.com/contest/1389
 ```
-#### Folder Directory structure
+#### Directory structure
 1. The generator first creates a contestPlatform directory i.e `codechef` or `codeforces` if it does not exists in the current directory. 
 
 2. Inside the platform directory it will create a directory named `{contestCode}` (if it does not exists) inside which all contest problem files will be saved.
