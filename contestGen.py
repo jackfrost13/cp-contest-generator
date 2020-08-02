@@ -19,7 +19,7 @@ def generateCFBoilerplate(problemLink, contestPath):
     inputTestcases = soup.select('.input > pre')
     outputTestcases = soup.select('.output > pre')
     inputFile = open(os.path.join(
-        contestPath, "input"+problemCode+".txt"), "w")
+        contestPath, "input_"+problemCode+".txt"), "w")
     for i in range(len(inputTestcases)):
         newLineRegex = re.compile(r'<br>|<br/>')
         removePreRegex = re.compile(r'<pre>|</pre>')
